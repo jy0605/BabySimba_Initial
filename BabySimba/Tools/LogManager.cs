@@ -49,6 +49,10 @@ namespace BabySimba.Tools
         public LogManager(string path)
             : this(path, LogType.Daily, null, null) { }
 
+        // 4) prefix와 postfix만을 인자로 받는 생성자
+        public LogManager(string prefix, string postfix)
+            : this(Path.Combine(Application.Root, "Log"), LogType.Daily, prefix, postfix) { }
+
         #endregion
 
 
@@ -81,7 +85,7 @@ namespace BabySimba.Tools
             if (!String.IsNullOrEmpty(prefix))
                 logFile = prefix + logFile;
             if (!String.IsNullOrEmpty(postfix))
-                logFile = postfix + logFile;
+                logFile = logFile + postfix;
             
             logFile += ".txt";
 

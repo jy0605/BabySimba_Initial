@@ -8,7 +8,7 @@ using BabySimba.Tools;
 Console.WriteLine(BabySimba.Tools.Application.Root); // Application(Class).Root(Property) 식으로 호출할 수 있다.
 
 // -- Day 2
-LogManager log = new LogManager();
+LogManager log = new LogManager(null, "_BabySimbaTestApp");
 
 log.WriteLine("[Begin Processing]------");
 
