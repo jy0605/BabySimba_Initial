@@ -15,6 +15,7 @@ log.WriteLine("[Begin Processing]------");
 // i가 각각의 프로세스라고 생각하면 아래와 같이 로그를 남길수도 있을 것임
 for (int i = 0; i < 10; i++)
 {
+    log.WriteConsole("Processing".PadRight(10) + ": " + i);
     log.WriteLine("Processing".PadRight(10) + ": " + i);
 
     // Do Processing
@@ -25,4 +26,18 @@ for (int i = 0; i < 10; i++)
 }
 
 log.WriteLine("[End Processing]------");
+
+
+// 확장메소드 구현하기
+// 1. static class 안에서 구현이 되어야 함
+// 2. static function으로 구현이 되어야 함
+// 3. 첫번째 인자가 this를 붙이고 확장할 클래스나 타입이 와야 함
+public static class ExtensionTest
+{
+    public static void WriteConsole(this LogManager log, string data)
+    {
+        log.Write(data);
+        Console.WriteLine(data);
+    }
+}
 
