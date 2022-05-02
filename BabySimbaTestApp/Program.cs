@@ -48,7 +48,37 @@ using BabySimba.Extensions;
 // Extension method를 한군데에 모아보자.(Folder 생성, IsNumeric?. IsDataTime? 등)
 // 자주사용하는 method를 추가추가하면 나중에 재산이 되는것임
 
-string temp = "2022-05-02";
+//string temp = "2022-05-02";
 // using BabySimba.Extensions; 으로 import
-Console.WriteLine("IsNumeric? : " + temp.IsNumeric());
-Console.WriteLine("IsDateTime? : " + temp.IsDatetime());
+//Console.WriteLine("IsNumeric? : " + temp.IsNumeric());
+//Console.WriteLine("IsDateTime? : " + temp.IsDatetime());
+
+
+// 2022.5.2 => enum 개념 다시 확인(Boxing, unBoxing이랑 같이 정리)
+enum City
+{
+    Seoul,   // 0
+    Daejun,  // 1
+    Busan = 5,  // 5
+    Jeju = 10   // 10
+}
+namespace BabySimbaTestApp
+{
+    public static class Program
+    {
+        static void Main(string[] args)
+        {
+            // enum 타입 변수 myCity 선언
+            City myCity;
+
+            // myCity에 City.Seoul값을 대입
+            myCity = City.Seoul;
+
+            if (myCity == City.Seoul) // enum값 비교
+            {
+                Console.WriteLine("Welcome to Seoul");
+            }
+        }
+    }
+
+}
