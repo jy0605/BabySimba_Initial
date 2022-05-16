@@ -54,31 +54,36 @@ using BabySimba.Extensions;
 //Console.WriteLine("IsDateTime? : " + temp.IsDatetime());
 
 
-// 2022.5.2 => enum 개념 다시 확인(Boxing, unBoxing이랑 같이 정리)
-enum City
-{
-    Seoul,   // 0
-    Daejun,  // 1
-    Busan = 5,  // 5
-    Jeju = 10   // 10
-}
-namespace BabySimbaTestApp
-{
-    public static class Program
-    {
-        static void Main(string[] args)
-        {
-            // enum 타입 변수 myCity 선언
-            City myCity;
+// 2022.5.2 => enum 개념 다시 확인(추후 Boxing, unBoxing이랑 같이 정리)
+//enum City
+//{
+//    Seoul,   // 0
+//    Daejun,  // 1
+//    Busan = 5,  // 5
+//    Jeju = 10   // 10
+//}
+//namespace BabySimbaTestApp
+//{
+//    public static class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            // enum 타입 변수 myCity 선언
+//            City myCity;
 
-            // myCity에 City.Seoul값을 대입
-            myCity = City.Seoul;
+//            // myCity에 City.Seoul값을 대입
+//            myCity = City.Seoul;
 
-            if (myCity == City.Seoul) // enum값 비교
-            {
-                Console.WriteLine("Welcome to Seoul");
-            }
-        }
-    }
+//            if (myCity == City.Seoul) // enum값 비교
+//            {
+//                Console.WriteLine("Welcome to Seoul");
+//            }
+//        }
+//    }
 
-}
+//}
+
+// 2022. 5. 16
+// Email Manager 만들기
+
+
